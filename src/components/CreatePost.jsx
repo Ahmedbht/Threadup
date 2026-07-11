@@ -26,5 +26,24 @@ functionCreatePost({onPostCreated}){
             console.error("Error creating post:", error);
         }
         setLoading(false);
-    }
+    };
+
+    return(
+        <div className="create-post">
+            <h2>Crete Post</h2>
+
+            {/*title*/}
+            <input type="text" placeholder="Enter a title" value={title} onChange={(e) =>setTitle(e.target.vaue)} className="input-field"/>
+
+            {/*content*/}
+            <textarea placeholder="whats on your mind frined?" value={content} onChange={(e) => setContent(e.target.value)} className="textarea-field" rows={4}/>
+
+                {/*submit*/}
+                <button className="btn-post" onClick={handleSubmit}>
+                    <Send size={20} />
+                    {loadind ? "Posting.." :"Post"}
+                </button>
+        </div>
+    );
 }
+export default CreatePost;

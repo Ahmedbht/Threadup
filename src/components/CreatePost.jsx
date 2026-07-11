@@ -2,11 +2,11 @@ import {useState} from 'react';
 import axios from 'axios';
 import {Send} from 'lucide-react';
 
-functionCreatePost({onPostCreated}){
+function CreatePost({onPostCreated}){
     //state for title and content
     const[title, setTitle] = useState('');
     const[content, setContent] = useState('');
-    cost[loading, setLoading] = useState(false);
+    const[loading, setLoading] = useState(false);
 
     const handleSubmit= async()=>{
         //condition if title pr content empty then do nothing

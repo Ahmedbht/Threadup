@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #0f0f0f;
+    color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    background: #000000;
+    border-bottom: 1px solid #2f3336;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.logo-icon{
+    background: #1d9bf0;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-text{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+}
+.btn-new-post{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1d9bf0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.btn-new-post:hover{
+    background: #1a8cd8;
+}
+.container{
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.create-post{
+    background: #1a1a1a;
+    border: 1px solid #2f3336;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.create-post h2{
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: white;
+}
+.input-field{
+    width: 100%;
+    background: #0f0f0f;
+    border: 1px solid #2f3336;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    outline: none;
+}
+.input-field:focus{
+    border-color: #1d9bf0;
+}
+.textarea-field{
+    width: 100%;
+    background: #0f0f0f;
+    border: 1px solid #2f3336;
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    outline: none;
+    resize: none;
+    font-family: 'Segoe UI', sans-serif;
+}
+.textarea-field:focus{
+    border-color: #1d9bf0;
+}
+.btn-post{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1d9bf0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    float: right;
+    transition: background 0.2s;
+}
+.btn-post:hover{
+    background: #1a8cd8;
+}
+.post-card{
+    background: #1a1a1a;
+    border: 1px solid #2f3336;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+.post-content{
+    flex: 1;
+}
+.post-title{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+}
+.post-body{
+    color: #8b98a5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+.post-date{
+    color: #536471;
+    font-size: 0.8rem;
+}
+.btn-delete{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: #f4212e;
+    border: 1px solid #f4212e;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.btn-delete:hover{
+    background: #f4212e;
+    color: white;
+}
+.loading{
+    text-align: center;
+    color: #536471;
+    padding: 40px;
+}
+.no-posts{
+    text-align: center;
+    color: #536471;
+    padding: 40px;
 }

@@ -1,6 +1,6 @@
 import {Plus} from 'lucide-react';
 
-function Navbar(){
+function Navbar({onNewPost}){
     return(
         <nav className="navbar">
             <div className="navbar-logo">

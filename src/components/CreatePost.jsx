@@ -41,7 +41,7 @@ function CreatePost({onPostCreated}){
                 {/*submit*/}
                 <button className="btn-post" onClick={handleSubmit}>
                     <Send size={20} />
-                    {loadind ? "Posting.." :"Post"}
+                    {loading ? "Posting.." :"Post"}
                 </button>
         </div>
     );

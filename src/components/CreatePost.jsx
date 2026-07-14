@@ -15,7 +15,7 @@ function CreatePost({onPostCreated}){
         setLoading(true);
         try{
             //send post request to backend fasyapi
-            await axios.post("http://localhose:8000/posts",{title, content,});
+            await axios.post("http://localhost:8000/posts",{title, content,});
 
         //return to zero .. clean iinputs after posting
         setTitle("");
@@ -33,7 +33,7 @@ function CreatePost({onPostCreated}){
             <h2>Crete Post</h2>
 
             {/*title*/}
-            <input type="text" placeholder="Enter a title" value={title} onChange={(e) =>setTitle(e.target.vaue)} className="input-field"/>
+            <input type="text" placeholder="Enter a title" value={title} onChange={(e) =>setTitle(e.target.value)} className="input-field"/>
 
             {/*content*/}
             <textarea placeholder="whats on your mind frined?" value={content} onChange={(e) => setContent(e.target.value)} className="textarea-field" rows={4}/>

@@ -4,8 +4,8 @@ import {Send} from 'lucide-react';
 
 function CreatePost({onPostCreated}){
     //state for title and content
-    const[title, setTitle] = useState('');
-    const[content, setContent] = useState('');
+    const[title, setTitle] = useState("");
+    const[content, setContent] = useState("");
     const[loading, setLoading] = useState(false);
 
     const handleSubmit= async()=>{
